@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Floresta Misteriosa</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/jogo.css">
+    <link rel="stylesheet" href="css/finais.css">
+</head>
+<body>
+    <audio id="intro-music" src="midia/intro-game.mp3" loop></audio>
+    <audio id="loading-music" src="midia/loading-music.mp3" loop></audio>
+    <audio id="bg-music" src="midia/medieval-music.mp3" loop></audio>
+    <audio id="click-sound" src="midia/click-pop.mp3" preload="auto"></audio>
+    <audio id="gameover-music" src="midia/gameover-music.mp3" loop></audio>
+    <audio id="win-music" src="midia/win-music.mp3" loop></audio>
+
+    <div id="start-screen">
+        <div class="start-content">
+            <h1>A Floresta Misteriosa</h1>
+            <p>Uma aventura textual onde suas escolhas determinam sua sobrevivência.</p>
+            <button id="start-btn">INICIAR JOGO</button>
+        </div>
+    </div>
+
+    <div id="loading-screen" class="hidden">
+        <div class="loading-content">
+            <h2>Entrando na floresta...</h2>
+            <div class="loading-bar-container">
+                <div id="loading-bar-progress"></div>
+            </div>
+            <span id="loading-text">0%</span>
+        </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <header>
+            <div class="controls-left">
+                <h2>A Floresta Misteriosa</h2>
+                
+                <div id="volume-container">
+                    <div class="volume-row">
+                        <span>🎵 Música:</span>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+                    </div>
+                    <div class="volume-row">
+                        <span>💥 Clique:</span>
+                        <input type="range" id="click-volume-slider" min="0" max="1" step="0.1" value="0.5">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="status">
+                <label for="hp-bar">Vida:</label>
+                <progress id="hp-bar" value="100" max="100"></progress>
+                <span id="hp-text">100%</span>
+            </div>
+        </header>
+        
+        <main>
+            <div id="text-container">
+                <p id="story-text">Você acorda na entrada de uma floresta densa e sombria...</p>
+            </div>
+            <div id="choices-container"></div>
+        </main>
+    </div>
+
+    <div id="game-over-screen" class="hidden">
+        <div class="game-over-content">
+            <img src="midia/trophy-lose.gif" alt="Animação de Derrota" class="game-over-gif">
+            
+            <h2>FIM DE JOGO</h2>
+            <p>A floresta cobrou o seu preço... Seus ferimentos foram graves demais para continuar.</p>
+            <div class="end-screen-buttons">
+                <button id="retry-btn" class="btn-primary">Recomeçar Aventura</button>
+                <button id="go-to-menu-lost-btn" class="btn-secondary">Voltar ao Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="win-screen" class="hidden">
+        <div class="win-content">
+            <img src="midia/trophy-win.gif" alt="Troféu de Vitória" class="win-trophy">
+            
+            <h2>VITÓRIA!</h2>
+            <p id="win-message">Você conseguiu sobreviver aos perigos da floresta!</p>
+            <div class="end-screen-buttons">
+                <button id="win-retry-btn" class="btn-primary">Jogar Novamente</button>
+                <button id="go-to-menu-win-btn" class="btn-secondary">Voltar ao Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

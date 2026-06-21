@@ -1,0 +1,35 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../midia/squirrel-nicos-sweatband.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Utilitários globais */
+.hidden {
+    display: none !important;
+}
+
+.end-screen-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.end-screen-buttons button {
+    text-align: center;
+    width: 80%;
+    max-width: 250px;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+}
